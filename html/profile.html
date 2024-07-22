@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Profile</h1>
+        <div class="box profile-box">
+            <div class="image-container">
+                <img src="../asserts/images/profile-image.jpg" alt="Profile Image">
+            </div>
+            <div id="profile" class="form-container">
+                <h2>Welcome, <span id="profile-username"></span></h2>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function displayUsername() {
+            const username = localStorage.getItem('loggedInUser');
+            if (username) {
+                document.getElementById('profile-username').textContent = username;
+            } else {
+                window.location.href = 'index.html'; // Redirect to login if not logged in
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('loggedInUser'); // Clear username from localStorage
+            window.location.href = 'index.html'; // Redirect to login page
+        }
+
+        window.onload = displayUsername;
+    </script>
+</body>
+</html>

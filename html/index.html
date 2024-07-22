@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <div class="box login-box">
+            <div class="image-container">
+                <img src="../asserts/images/login-image.jpg" alt="Login Image">
+            </div>
+            <div id="login-form" class="form-container">
+                <form id="login" onsubmit="return handleLogin(event)">
+                    <table>
+                        <tr>
+                            <td><label for="username">Username:</label></td>
+                            <td><input type="text" id="username" placeholder="Username" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="password">Password:</label></td>
+                            <td><input type="password" id="password" placeholder="Password" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><button type="submit">Login</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><p><a href="forgot-password.html">Forgot Password?</a></p></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><p>Don't have an account? <a href="signup.html">Sign Up</a></p></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
